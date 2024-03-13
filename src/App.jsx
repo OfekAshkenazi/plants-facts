@@ -6,7 +6,6 @@ import extarnalLink from "./assets/images/icon-source.svg"
 
 import { dataService } from "./services/dataService"
 
-
 export default function App() {
   const [plantState, setPlantState] = useState('Mercury')
 
@@ -55,7 +54,7 @@ export default function App() {
 
         <div className="main-content-right-side">
 
-          <h1>MERCURY</h1>
+          <h1>{plantData?.name}</h1>
 
           <p>
             {getContent()}
@@ -91,7 +90,7 @@ export default function App() {
 
       </section>
 
-      <Footer />
+      <Footer plantData={plantData}/>
 
     </main>
 
