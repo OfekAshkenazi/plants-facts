@@ -2,7 +2,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: em(15px) em(25px);
+    padding: em(0px) em(20px);
     min-height: 100px;
 
     .header-left {
@@ -16,9 +16,14 @@ header {
         font-size: em(23px);
         gap: em(20px);
         text-transform: capitalize;
-
+        
         .header-item {
+            padding: em(29px) em(15px);
             cursor: pointer;
+
+            &.active {
+               border-top: 6px solid $clrSeaBlue;
+            }
         }
 
     }

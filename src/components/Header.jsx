@@ -1,4 +1,4 @@
-export default function Header({handlePlantState}) {
+export default function Header({handlePlantState,plantState}) {
     return (
         <section>
 
@@ -9,9 +9,9 @@ export default function Header({handlePlantState}) {
                 </div>
 
                 <div className="header-right flex">
-                    <div onClick={() => handlePlantState("mercury")} className="header-item">mercury</div>
-                    <div onClick={() => handlePlantState("venus")} className="header-item">venus</div>
-                    <div onClick={() => handlePlantState("earth")} className="header-item">earth</div>
+                    <div onClick={() => handlePlantState("Mercury")} className={`header-item ${plantState === "Mercury" && "active"}`}>mercury</div>
+                    <div onClick={() => handlePlantState("Venus")} className={`header-item ${plantState === "Venus" && "active"}`}>venus</div>
+                    <div onClick={() => handlePlantState("Earth")} className={`header-item ${plantState === "Earth" && "active"}`}>earth</div>
                     {/* <div onClick={() => handlePlantState("mars")} className="header-item">mars</div>
                     <div onClick={() => handlePlantState("jupiter")} className="header-item">jupiter</div>
                     <div onClick={() => handlePlantState("saturn")} className="header-item">saturn</div>

@@ -3,21 +3,33 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import merImg from "./assets/images/planet-mercury.svg"
 import extarnalLink from "./assets/images/icon-source.svg"
+import { dataService } from "./services/dataService"
 
 export default function App() {
-  const [plantState, setPlantState] = useState(0)
+  const [plantState, setPlantState] = useState('Mercury')
+
+  const[plantData, setPlantData]  = useState({})
+
+  useEffect(() => {
+    getPlantData()
+
+  }, [plantState])
+
+  function getPlantData() {
+    const data = dataService.getDataOfPlants()
+    const filterData = data.filter((plant,idx) => plant.name === plantState)
+    console.log(filterData)
+    setPlantData(prevPlantData => filterData)
+  }
 
   function handlePlantState(plant) {
     setPlantState(plant)
   }
 
-  useEffect(() => {
-  }, [plantState])
-
   return (
     <main className="main-layout-big-img-hero">
 
-      <Header handlePlantState={handlePlantState} />
+      <Header handlePlantState={handlePlantState} plantState={plantState}/>
 
       <section className="main-layout">
 
