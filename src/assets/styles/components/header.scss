@@ -3,6 +3,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: em(15px) em(25px);
+    min-height: 100px;
 
     .header-left {
         font-size: em(23px);
@@ -13,7 +14,7 @@ header {
         justify-content: end;
         flex-grow: 1;
         font-size: em(23px);
-        gap: em(9px);
+        gap: em(20px);
         text-transform: capitalize;
 
         .header-item {

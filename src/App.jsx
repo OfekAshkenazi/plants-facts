@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import merImg from "./assets/images/planet-mercury.svg"
 import extarnalLink from "./assets/images/icon-source.svg"
 
@@ -63,6 +64,8 @@ export default function App() {
 
 
       </section>
+
+      <Footer />
 
     </main>
 

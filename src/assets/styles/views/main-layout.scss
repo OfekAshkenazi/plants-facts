@@ -10,7 +10,6 @@
 .main-layout {
     flex-grow: 1;
     display: flex;
-    // background-color: red;
     align-items: center;
 
     .main-content-left-side {
@@ -33,8 +32,6 @@
         gap: em(8px);
         text-align: start;
         flex-grow: 1;
-
-
 
         p {
             text-align: start;
@@ -61,7 +58,7 @@
                 display: flex;
                 justify-content: space-around;
                 border: 1.5px solid #393950;
-                padding: em(13.5px) em(35px);
+                padding: em(13.5px) em(15px);
                 align-items: center;
                 cursor: pointer;
 

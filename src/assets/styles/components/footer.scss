@@ -1,0 +1,34 @@
+.footer {
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+    .footer-item {
+        position: relative;
+        top: em(65px);
+        border: 1.5px solid #393950;
+        border-radius: em(3px);
+        padding: em(24px);
+        min-width: 200px;
+        
+        @media (max-width: 750px) {
+            // max-width: 120px;
+            min-width: 90px;
+            padding: em(12px);
+
+        }
+
+        P {
+            color: #393950;
+            font-family: $clrSpartan;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+
+        }
+
+    }
+
+
+}
