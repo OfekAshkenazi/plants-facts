@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import merImg from "./assets/images/planet-mercury.svg"
+
 import extarnalLink from "./assets/images/icon-source.svg"
+
 import { dataService } from "./services/dataService"
+
 
 export default function App() {
   const [plantState, setPlantState] = useState('Mercury')
 
-  const[plantData, setPlantData]  = useState({})
+  const [plantData, setPlantData] = useState(null)
+
+  const [contentState, setContentState] = useState(0)
 
   useEffect(() => {
     getPlantData()
@@ -17,25 +21,35 @@ export default function App() {
 
   function getPlantData() {
     const data = dataService.getDataOfPlants()
-    const filterData = data.filter((plant,idx) => plant.name === plantState)
-    console.log(filterData)
-    setPlantData(prevPlantData => filterData)
+    const filterData = data.filter((plant, idx) => plant.name === plantState)
+    setPlantData(prevPlantData => filterData[0])
   }
 
   function handlePlantState(plant) {
     setPlantState(plant)
   }
 
+  function handleChangeContentState(num) {
+    setContentState(prev => num)
+  }
+
+  function getContent() {
+    let data = ''
+    if(contentState === 0) return data = plantData?.overview.content
+    if(contentState === 1) return data = plantData?.structure.content
+    if(contentState === 2) return data = plantData?.geology.content
+  }
+
   return (
     <main className="main-layout-big-img-hero">
 
-      <Header handlePlantState={handlePlantState} plantState={plantState}/>
+      <Header handlePlantState={handlePlantState} plantState={plantState} />
 
       <section className="main-layout">
 
         <div className="main-content-left-side">
 
-          <img src={merImg} alt="" />
+          {plantData && <img src={require(`./assets/images/${plantData?.images.planet}`)} alt="" />}
 
         </div>
 
@@ -43,28 +57,28 @@ export default function App() {
 
           <h1>MERCURY</h1>
 
-          <p>Mercury is the smallest planet in the Solar
-            System and the closest to the Sun.
-            Its orbit around the Sun takes 87.97 Earth days,
-            the shortest of all the Sun's planets.
-            Mercury is one of four terrestrial planets
-            in the Solar System, and is a rocky body
-            like Earth.
+          <p>
+            {getContent()}
           </p>
 
           <div className="flex wiki"><p>Source:  Wikipedia</p> <img src={extarnalLink} alt="" /></div>
 
           <section className="right-side-down-container">
 
-            <div className="right-down-item">
+            <div
+              className={`right-down-item ${contentState === 0 && 'active'}`}
+              onClick={() => handleChangeContentState(0)}
+            >
               <p>01</p>
               <p>OVERVIEW</p>
             </div>
-            <div className="right-down-item">
+            <div className={`right-down-item ${contentState === 1 && 'active'}`}
+              onClick={() => handleChangeContentState(1)}>
               <p>02</p>
               <p>Internal Structure</p>
             </div>
-            <div className="right-down-item">
+            <div className={`right-down-item ${contentState === 2 && 'active'}`}
+              onClick={() => handleChangeContentState(2)}>
               <p>03</p>
               <p>Surface Geology</p>
             </div>
