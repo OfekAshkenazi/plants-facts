@@ -4,5 +4,78 @@
     height: 100vh;
     background-color: $clrPB;
     color: white;
-    background-image: url(../../images/background-stars.svg); 
+    background-image: url(../../images/background-stars.svg);
+}
+
+.main-layout {
+    flex-grow: 1;
+    display: flex;
+    // background-color: red;
+    align-items: center;
+
+    .main-content-left-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+        img {
+            max-width: em(290px);
+            max-height: em(290px);
+        }
+
+    }
+
+    .main-content-right-side {
+        display: flex;
+        flex-direction: column;
+        max-width: em(350px);
+        gap: em(8px);
+        text-align: start;
+        flex-grow: 1;
+
+
+
+        p {
+            text-align: start;
+            font-family: $clrSpartan;
+        }
+
+        .wiki {
+            gap: em(5px);
+            align-items: center;
+
+            img {
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+            }
+        }
+
+        .right-side-down-container {
+            display: flex;
+            flex-direction: column;
+            gap: em(15px);
+
+            .right-down-item {
+                display: flex;
+                justify-content: space-around;
+                border: 1.5px solid #393950;
+                padding: em(13.5px) em(35px);
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $clrSeaBlue;
+                }
+
+                p {
+                    flex-grow: 1;
+                }
+            }
+
+        }
+
+    }
+
 }
