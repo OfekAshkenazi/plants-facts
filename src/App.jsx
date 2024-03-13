@@ -34,9 +34,23 @@ export default function App() {
 
   function getContent() {
     let data = ''
-    if(contentState === 0) return data = plantData?.overview.content
-    if(contentState === 1) return data = plantData?.structure.content
-    if(contentState === 2) return data = plantData?.geology.content
+    if (contentState === 0) return data = plantData?.overview.content
+    if (contentState === 1) return data = plantData?.structure.content
+    if (contentState === 2) return data = plantData?.geology.content
+  }
+
+  function getLinkToWiki() {
+    let data = ''
+    if (contentState === 0) return data = plantData?.overview.source
+    if (contentState === 1) return data = plantData?.structure.source
+    if (contentState === 2) return data = plantData?.geology.source
+  }
+
+  function getLinkForImg() {
+    let data = ''
+    if (contentState === 0) return data = plantData?.images.planet
+    if (contentState === 1) return data = plantData?.images.internal
+    if (contentState === 2) return data = plantData?.images.geology
   }
 
   return (
@@ -48,7 +62,7 @@ export default function App() {
 
         <div className="main-content-left-side">
 
-          {plantData && <img src={require(`./assets/images/${plantData?.images.planet}`)} alt="" />}
+          {plantData && <img src={require(`./assets/images/${getLinkForImg()}`)} alt="" />}
 
         </div>
 
@@ -60,7 +74,7 @@ export default function App() {
             {getContent()}
           </p>
 
-          <div className="flex wiki"><p>Source:  Wikipedia</p> <img src={extarnalLink} alt="" /></div>
+          <div className="flex wiki"><p>Source:  Wikipedia</p> <a className="flex " target="_blank" href={getLinkToWiki()}><img re src={extarnalLink} alt="" /> </a></div>
 
           <section className="right-side-down-container">
 
@@ -84,14 +98,9 @@ export default function App() {
 
           </section>
 
-
         </div>
-
-
       </section>
-
-      <Footer plantData={plantData}/>
-
+      <Footer plantData={plantData} />
     </main>
 
   )
