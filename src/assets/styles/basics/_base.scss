@@ -34,3 +34,35 @@ a {
     text-decoration: none;
 }
 
+body {
+    font-family: spartanReg;
+    font-size: em(14px);
+    line-height: em(25px);
+}
+
+h1 {
+    font-family: antonioMed;
+    font-size: em(80px);
+    line-height: em(103px);
+}
+
+h2 {
+    font-family: antonioMed;
+    font-size: em(40px);
+    line-height: em(52px);
+    word-spacing: em(-1.5px);
+}
+
+h3 {
+    font-family: antonioMed;
+    font-size: em(12px);
+    line-height: em(25px);
+    word-spacing: em(2.6px);
+}
+
+h4 {
+    font-family: antonioMed;
+    font-size: em(11px);
+    line-height: em(25px);
+    word-spacing: em(1px);
+}
