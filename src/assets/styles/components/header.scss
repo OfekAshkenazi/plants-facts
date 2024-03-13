@@ -1,3 +1,13 @@
+@media (min-width:1050px) {
+    .header-item {
+    
+        &.active {
+           border-top: 6px solid $clrSeaBlue;
+        }
+    }
+}
+
+
 header {
     display: flex;
     align-items: center;
@@ -21,9 +31,6 @@ header {
             padding: em(29px) em(15px);
             cursor: pointer;
 
-            &.active {
-               border-top: 6px solid $clrSeaBlue;
-            }
         }
 
     }
@@ -33,4 +40,41 @@ header {
 .border {
     display: flex;
     border-bottom: 1.5px solid $clrLightGray;
+}
+
+@media (max-width:1050px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        min-height: 100px;
+        padding: em(20px) em(20px);
+
+     
+        .header-right {
+            gap: em(0px);
+            
+            .header-item {
+                padding: em(20px) em(10px);
+    
+                &.active {
+                    border-bottom: 6px solid $clrSeaBlue;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:650px) {
+    header {
+        padding: em(20px) em(5px);
+    
+        .header-right {
+            gap: em(0px);
+            
+            .header-item {
+                padding: em(20px) em(5px);
+
+            }
+        }
+    }
 }

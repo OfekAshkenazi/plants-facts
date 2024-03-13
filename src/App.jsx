@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-import extarnalLink from "./assets/images/icon-source.svg"
+import extarnalLinkImg from "./assets/images/icon-source.svg"
 
 import { dataService } from "./services/dataService"
 
@@ -73,13 +73,22 @@ export default function App() {
 
         <div className="main-content-right-side">
 
-          <h1>{plantData?.name}</h1>
+          <div className="flex column container">
 
-          <p>
-            {getContent()}
-          </p>
+            <h1>{plantData?.name}</h1>
 
-          <div className="flex wiki"><p>Source:  Wikipedia</p> <a className="flex " target="_blank" href={getLinkToWiki()}><img re src={extarnalLink} alt="" /> </a></div>
+            <p>
+              {getContent()}
+            </p>
+
+            <div className="flex wiki">
+              <p>Source:  Wikipedia</p>
+              <a className="flex" target="_blank" href={getLinkToWiki()}>
+                <img src={extarnalLinkImg} alt="" />
+              </a>
+
+            </div>
+          </div>
 
           <section className="right-side-down-container">
 

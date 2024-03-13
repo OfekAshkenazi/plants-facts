@@ -11,9 +11,8 @@
         border-radius: em(3px);
         padding: em(24px);
         min-width: 200px;
-        
-        @media (max-width: 750px) {
-            // max-width: 120px;
+
+        @media (max-width: 850px) {
             min-width: 90px;
             padding: em(12px);
 
@@ -25,10 +24,24 @@
             font-weight: bold;
             font-size: 13px;
             text-transform: uppercase;
-
         }
-
     }
+}
 
+@media (max-width: 550px) {
+    .footer {
+
+        .footer-item {
+            position: static;
+
+            P {
+                font-size: 11px;
+            }
+
+            h2 {
+                font-size: em(19px);
+            }
+        }
+    }
 
 }

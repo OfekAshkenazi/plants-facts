@@ -1,7 +1,8 @@
 .main-layout-big-img-hero {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     background-color: $clrPB;
     color: white;
     background-image: url(../../images/background-stars.svg);
@@ -10,26 +11,9 @@
 .main-layout {
     flex-grow: 1;
     display: flex;
+    flex-direction: row;
     align-items: center;
 
-    .main-content-left-side {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 70%;
-
-        .image-one {
-            max-width: em(290px);
-            max-height: em(290px);
-        }
-        .image-two {
-            position: relative;
-            bottom: em(25px);
-            max-width: em(150px);
-            max-height: em(150px);
-        }
-
-    }
 
     .main-content-right-side {
         display: flex;
@@ -147,6 +131,7 @@
                     }
 
                 }
+
                 &.Neptune {
 
                     &.active {
@@ -159,7 +144,6 @@
 
                 }
 
-
                 p {
                     flex-grow: 1;
                 }
@@ -169,4 +153,35 @@
 
     }
 
+}
+
+
+@media (max-width:1050px) {
+    .main-layout {
+        // flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .main-content-right-side {
+            padding: em(15px) em(28px);
+            display: flex;
+            flex-direction: row;
+            min-width: 100%;
+            gap: em(8px);
+            
+            .container {
+                max-width: 45%;
+                align-self: flex-end;
+            }
+        }
+
+        .right-side-down-container {
+            flex-grow: 1;
+            align-self: flex-end;
+        }
+
+
+    }
 }

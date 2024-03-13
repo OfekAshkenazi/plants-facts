@@ -1,0 +1,42 @@
+.main-content-left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+
+    .image-one {
+        max-width: em(290px);
+        max-height: em(290px);
+    }
+
+    .image-two {
+        position: relative;
+        bottom: em(25px);
+        max-width: em(150px);
+        max-height: em(150px);
+    }
+
+}
+
+@media (max-width: 1050px) {
+    .main-content-left-side {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: em(50px);
+
+        .image-one {
+            max-width: em(290px);
+            max-height: em(290px);
+        }
+
+        .image-two {
+            position: relative;
+            bottom: em(25px);
+            max-width: em(150px);
+            max-height: em(150px);
+        }
+
+    }
+
+}
