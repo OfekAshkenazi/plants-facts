@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: em(15px) em(25px);
+
+    .header-left {
+        font-size: em(23px);
+
+    }
+
+    .header-right {
+        justify-content: end;
+        flex-grow: 1;
+        font-size: em(23px);
+        gap: em(9px);
+        text-transform: capitalize;
+
+        .header-item {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.border {
+    display: flex;
+    border-bottom: 1.5px solid $clrLightGray;
+}

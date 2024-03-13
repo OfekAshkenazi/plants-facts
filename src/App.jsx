@@ -1,12 +1,21 @@
+import { useEffect, useState } from "react"
 import Header from "./components/Header"
-import background from "./assets/images/background-stars.svg"
 
-export default function app() {
+export default function App() {
+  const [plantState, setPlantState] = useState(0)
+
+  function handlePlantState(plant) {
+    setPlantState(plant)
+  }
+
+  useEffect(() => {
+    console.log(plantState)
+  }, [plantState])
 
   return (
     <main className="main-layout-big-img-hero">
 
-      <Header />
+      <Header handlePlantState={handlePlantState}/>
 
       <section className="main-layout">
 
@@ -16,5 +25,5 @@ export default function app() {
     </main>
 
   )
-} 
- 
+}
+
