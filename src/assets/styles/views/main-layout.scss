@@ -18,9 +18,15 @@
         align-items: center;
         width: 70%;
 
-        img {
+        .image-one {
             max-width: em(290px);
             max-height: em(290px);
+        }
+        .image-two {
+            position: relative;
+            bottom: em(25px);
+            max-width: em(150px);
+            max-height: em(150px);
         }
 
     }

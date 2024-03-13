@@ -50,7 +50,11 @@ export default function App() {
     let data = ''
     if (contentState === 0) return data = plantData?.images.planet
     if (contentState === 1) return data = plantData?.images.internal
-    if (contentState === 2) return data = plantData?.images.geology
+    if (contentState === 2) return data = plantData?.images.planet
+  }
+
+  function getSecondLinkForImg() {
+    return plantData?.images.geology
   }
 
   return (
@@ -62,7 +66,8 @@ export default function App() {
 
         <div className="main-content-left-side">
 
-          {plantData && <img src={require(`./assets/images/${getLinkForImg()}`)} alt="" />}
+          {plantData && <img className="image-one" src={require(`./assets/images/${getLinkForImg()}`)} alt="" />}
+          {contentState === 2 && <img className="image-two" src={require(`./assets/images/${getSecondLinkForImg()}`)} alt="" />}
 
         </div>
 
