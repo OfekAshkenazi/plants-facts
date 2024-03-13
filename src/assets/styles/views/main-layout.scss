@@ -76,6 +76,90 @@
                     background-color: $clrSeaBlue;
                 }
 
+                &.Venus {
+
+                    &.active {
+                        background-color: $clrY;
+                    }
+
+                    &:hover {
+                        background-color: $clrY;
+                    }
+
+                }
+
+                &.Earth {
+
+                    &.active {
+                        background-color: $clrPurple;
+                    }
+
+                    &:hover {
+                        background-color: $clrPurple;
+                    }
+
+                }
+
+                &.Mars {
+
+                    &.active {
+                        background-color: $clrDarkOrange;
+                    }
+
+                    &:hover {
+                        background-color: $clrDarkOrange;
+                    }
+
+                }
+
+                &.Jupiter {
+
+                    &.active {
+                        background-color: $clrRedOrange;
+                    }
+
+                    &:hover {
+                        background-color: $clrRedOrange;
+                    }
+
+                }
+
+                &.Saturn {
+
+                    &.active {
+                        background-color: $clrLightOrange;
+                    }
+
+                    &:hover {
+                        background-color: $clrLightOrange;
+                    }
+
+                }
+
+                &.Uranus {
+
+                    &.active {
+                        background-color: $clrSeaBlueLight;
+                    }
+
+                    &:hover {
+                        background-color: $clrSeaBlueLight;
+                    }
+
+                }
+                &.Neptune {
+
+                    &.active {
+                        background-color: $clrLightBlue;
+                    }
+
+                    &:hover {
+                        background-color: $clrLightBlue;
+                    }
+
+                }
+
+
                 p {
                     flex-grow: 1;
                 }

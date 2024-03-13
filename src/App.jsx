@@ -84,18 +84,18 @@ export default function App() {
           <section className="right-side-down-container">
 
             <div
-              className={`right-down-item ${contentState === 0 && 'active'}`}
+              className={`right-down-item ${contentState === 0 && 'active'}  ${plantData?.name}`}
               onClick={() => handleChangeContentState(0)}
             >
               <p>01</p>
               <p>OVERVIEW</p>
             </div>
-            <div className={`right-down-item ${contentState === 1 && 'active'}`}
+            <div className={`right-down-item ${contentState === 1 && 'active'} ${plantData?.name}`}
               onClick={() => handleChangeContentState(1)}>
               <p>02</p>
               <p>Internal Structure</p>
             </div>
-            <div className={`right-down-item ${contentState === 2 && 'active'}`}
+            <div className={`right-down-item ${contentState === 2 && 'active'}  ${plantData?.name}`}
               onClick={() => handleChangeContentState(2)}>
               <p>03</p>
               <p>Surface Geology</p>
