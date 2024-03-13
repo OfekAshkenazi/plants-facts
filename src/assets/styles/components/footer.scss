@@ -5,8 +5,6 @@
     justify-content: space-around;
 
     .footer-item {
-        position: relative;
-        top: em(65px);
         border: 1.5px solid #393950;
         border-radius: em(3px);
         padding: em(24px);
@@ -28,20 +26,20 @@
     }
 }
 
-@media (max-width: 550px) {
-    .footer {
+// @media (max-width: 550px) {
+//     .footer {
 
-        .footer-item {
-            position: static;
+//         .footer-item {
+//             position: static;
 
-            P {
-                font-size: 11px;
-            }
+//             P {
+//                 font-size: 11px;
+//             }
 
-            h2 {
-                font-size: em(19px);
-            }
-        }
-    }
+//             h2 {
+//                 font-size: em(19px);
+//             }
+//         }
+//     }
 
-}
+// }
