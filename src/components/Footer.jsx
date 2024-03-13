@@ -1,8 +1,7 @@
 export default function Footer({plantData}) {
-    console.log(plantData)
+    
     return (
         <section className="footer">
-
 
             <div className="footer-item">
                 <p>ROTATION TIME</p>
