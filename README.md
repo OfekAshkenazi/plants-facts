@@ -1,6 +1,6 @@
 # Plants facts
 
-Plants fact is a web application that show some wikipadia facts abouts our plants in the solar system.
+Plants fact is a web application that show some wikipedia facts abouts our plants in the solar system.
 
 # Link to live demo
 https://ofekashkenazi.github.io/plants-facts/
