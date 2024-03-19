@@ -21,7 +21,7 @@ Navigate to the directory and run npm i && npm run start
     
 ## Screenshots
 ### Home page
-![Home page](/assets/images/home-earth.png)
+![Home page](/src/assets/images/home-earth.png)
 
 
 ## Authors
